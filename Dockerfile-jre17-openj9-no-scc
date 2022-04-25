@@ -1,3 +1,8 @@
+# ------------------------------------------------------------------------------
+#               NOTE: THIS DOCKERFILE IS GENERATED VIA "build_latest.sh" or "update_multiarch.sh"
+#
+#                       PLEASE DO NOT EDIT IT DIRECTLY.
+# ------------------------------------------------------------------------------
 #
 # Licensed under the Apache License, Version 2.0 (the "License");
 # you may not use this file except in compliance with the License.
@@ -57,7 +62,7 @@ RUN set -eux; \
     case "${ARCH}" in \
        amd64|x86_64) \
          ESUM='69f1f7a6b3d4a701f3c25ac338768d8a414594fa2c50ddfbd8c014e8a5e790db'; \
-         BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.1%2B12_openj9-0.29.1/ibm-semeru-open-jre_x64_linux_17.0.1_12_openj9-0.29.1.tar.gz'; \
+         BINARY_URL='https://github.com/ibmruntimes/semeru17-binaries/releases/download/jdk-17.0.3%2B7_openj9-0.32.0/ibm-semeru-open-jre_x64_linux_17.0.3_7_openj9-0.32.0.tar.gz'; \
          ;; \
        *) \
          echo "Unsupported arch: ${ARCH}"; \
@@ -76,4 +81,3 @@ RUN set -eux; \
 ENV JAVA_HOME=/opt/java/openjdk \
     PATH="/opt/java/openjdk/bin:$PATH"
 ENV JAVA_TOOL_OPTIONS="-XX:+IgnoreUnrecognizedVMOptions -XX:+IdleTuningGcOnIdle"
-
